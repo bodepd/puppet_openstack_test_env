@@ -12,6 +12,7 @@ mod 'bodepd/squid3', :git => 'git://github.com/bodepd/puppet-squid3'
 mod 'puppetlabs/apache', :git => 'git://github.com/bodepd/puppetlabs-apache'
 mod 'puppetlabs/firewall', '0.2.1'
 mod 'ripienaar/hiera_puppet', :git => 'https://github.com/ripienaar/hiera-puppet'
+mod 'bodepd/zuul', :git => 'git://github.com/bodepd/puppet-zuul'
 
 # modules for installing puppet
 mod 'puppetlabs/java'
