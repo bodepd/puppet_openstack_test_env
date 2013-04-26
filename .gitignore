@@ -1,0 +1,7 @@
+modules
+.DS_Store
+.tmp
+.librarian
+hiera_data/secure.yaml
+Puppetfile.lock
+.vagrant
