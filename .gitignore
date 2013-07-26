@@ -4,4 +4,5 @@ modules
 .librarian
 hiera_data/secure.yaml
 Puppetfile.lock
-.vagrant
+.vagrant*
+vendor

@@ -64,6 +64,10 @@ Vagrant::Config.run do |config|
         puppet.options        = puppet_options
       end
 
+      agent.vm.provision :shell do |shell|
+        shell.inline = "/opt/vagrant_ruby/bin/gem uninstall puppet;gem uninstall -x -a puppet;echo -e '#!/bin/bash\npuppet agent $@' > /sbin/puppetd;chmod a+x /sbin/puppetd"
+      end
+
       agent.vm.share_folder("hiera_data", '/etc/puppet/hiera_data', './hiera_data/')
 
       if run_mode == :apply

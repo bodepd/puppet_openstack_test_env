@@ -10,10 +10,19 @@ group { 'puppet':
   ensure => 'present',
 }
 
-package { ['hiera', 'hiera-puppet']:
-  ensure   => present,
-  provider => 'gem',
+include puppet::repo::puppetlabs
+package { 'rubygems':
+  ensure => present,
 }
+package { 'puppet-common':
+  ensure  => '3.2.2-1puppetlabs1',
+  require => [Apt::Source['puppetlabs'],Package['rubygems']],
+}
+package { 'puppet':
+  ensure  => '3.2.2-1puppetlabs1',
+  require => Package['puppet-common'],
+}
+
 
 file { '/etc/puppet/hiera.yaml':
   content =>
