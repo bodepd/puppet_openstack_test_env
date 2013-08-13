@@ -21,7 +21,9 @@ mod 'puppetlabs/apt',    :git => 'git://github.com/puppetlabs/puppetlabs-apt'
 mod 'puppetlabs/vcsrepo', :git => 'git://github.com/puppetlabs/puppetlabs-vcsrepo'
 mod 'puppetlabs/apache', :git => 'git://github.com/puppetlabs/puppetlabs-apache'
 mod 'puppetlabs/firewall', :git => 'git://github.com/puppetlabs/puppetlabs-firewall'
-mod 'ripienaar/concat', :git => 'git://github.com/ripienaar/puppet-concat'
+mod 'ripienaar/concat',
+  :git => 'git://github.com/ripienaar/puppet-concat',
+  :ref => '7313d26'
 
 mod 'bodepd/vagrant', :git => 'https://github.com/bodepd/puppet-vagrant'
 
