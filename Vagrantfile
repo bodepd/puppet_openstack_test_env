@@ -13,20 +13,20 @@ Vagrant::Config.run do |config|
    {'jenkins_server' =>
      {
        'memory'   => 512,
-       'ip1'      => '172.76.0.2',
+       'ip1'      => '172.16.3.2',
        'run_mode' => :apply,
      }
    },
    {'jenkins_agent1' =>
      {'memory'   => 512,
-      'ip1'      => '172.76.0.3',
+      'ip1'      => '172.16.3.3',
       'run_mode' => :apply,
      }
    },
    {'jenkins_agent2' =>
      {
        'memory'   => 512,
-       'ip1'      => '172.76.0.4',
+       'ip1'      => '172.16.3.4',
        'run_mode' => :apply,
      }
    }

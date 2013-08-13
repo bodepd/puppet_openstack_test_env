@@ -13,15 +13,15 @@ mod 'bodepd/squid3', :git => 'git://github.com/bodepd/puppet-squid3'
 # this needs to be upstreamed off of openstack-infra
 mod 'bodepd/zuul', :git => 'git://github.com/bodepd/puppet-zuul'
 
+mod 'bodepd/pip', :git => 'git://github.com/bodepd/puppet-pip'
+
 # external deps
 mod 'puppetlabs/stdlib', :git => 'git://github.com/puppetlabs/puppetlabs-stdlib'
 mod 'puppetlabs/apt',    :git => 'git://github.com/puppetlabs/puppetlabs-apt'
-mod 'puppetlabs/vcsrepo'
+mod 'puppetlabs/vcsrepo', :git => 'git://github.com/puppetlabs/puppetlabs-vcsrepo'
 mod 'puppetlabs/apache', :git => 'git://github.com/puppetlabs/puppetlabs-apache'
 mod 'puppetlabs/firewall', :git => 'git://github.com/puppetlabs/puppetlabs-firewall'
 mod 'ripienaar/concat', :git => 'git://github.com/ripienaar/puppet-concat'
-
-
 
 mod 'bodepd/vagrant', :git => 'https://github.com/bodepd/puppet-vagrant'
 

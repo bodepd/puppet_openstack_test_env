@@ -1,9 +1,15 @@
 Host { ensure => present }
 
+# use a squid proxy!!
+class { 'apt':
+  proxy_host => '172.16.3.1',
+  proxy_port => '3128',
+}
+
 host {
-  'jenkins-server': ip => '172.76.0.2';
-  'jenkins-agent1': ip => '172.76.0.3';
-  'jenkins-agent2': ip => '172.76.0.4';
+  'jenkins-server': ip => '172.16.3.2';
+  'jenkins-agent1': ip => '172.16.3.3';
+  'jenkins-agent2': ip => '172.16.3.4';
 }
 
 group { 'puppet':
@@ -11,6 +17,9 @@ group { 'puppet':
 }
 
 include puppet::repo::puppetlabs
+
+Apt::Source<||> -> Package<||>
+
 package { 'rubygems':
   ensure => present,
 }
